@@ -131,6 +131,7 @@ def num_points_scored(player)
   answer=0
   count=0
   while count<game_hash.length do
+<<<<<<< HEAD
     game_hash[game_hash.keys[count]][:players].each do |x|
       if x[:player_name].eql?(player)
         answer=x[:points]
@@ -220,6 +221,11 @@ def big_shoe_rebounds
       if x[:shoe]>big
         big=x[:shoe]
         answer=x[:rebounds]
+=======
+    game_hash[game_hash.keys[count]][:players].each do |key,value|
+      if value.eql?(player)
+        answer=game_hash[game_hash.keys[count]][:players][:points]
+>>>>>>> 2d025e62b3b177cdff48a8581cea2da754fd0537
       end
     end
     count+=1
